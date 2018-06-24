@@ -81,8 +81,10 @@ $(document).ready(function(){
             targetBtn.addClass("active");
         }
     }
-    var queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + "beef" + "&limitLicense=false&number=3&ranking=2"
-
+    var queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredients + "&limitLicense=false&number=3&ranking=2"
+    // var queryUrl = "https://api.edamam.com/search?q=" + ingredients + "&app_id=$026e5f2d&app_key=$f643c47302976108083824e826b3e4d1"
+    // var queryUrl = "https://api.edamam.com/api/nutrition-details?app_id=$4313d7cd&app_key=$d3af3a7de5ed75e97f19ca4cea1c7d37" 
+    
     function getRecipe() {
         var config = {
             beforeSend: function(request) {
@@ -97,6 +99,18 @@ $(document).ready(function(){
             console.log(response);
         });
     }
+
+    // function getNutrition() {
+    //     var config = {
+    //         dataType: "json",
+    //         url: queryUrl,
+    //         method: "GET"
+    //     }
+    //     $.ajax(config)
+    //     .done(function(response){
+    //         console.log(response);
+    //     });
+    // }
 
 
     displayIngredients();

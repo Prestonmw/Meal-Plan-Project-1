@@ -18,21 +18,64 @@
                 <p> Simply click on the ingredients you already have at home to see what meals you can make! (Un-click to remove ingredient.)</p>
               </div>
     <br>
-    <div class="container wrapper">
-        <row class="row">
-            <column class="col-md-12 text-center" id="meatColumn"></column>
-            <column class="col-md-12 text-center" id="dairyColumn"></column>
-            <column class="col-md-12 text-center" id="veggieColumn"></column>
-            <column class="col-md-12 text-center" id="fruitColumn"></column>
-            <column class="col-md-12 text-center" id="pastaColumn"></column>
-            <column class="col-md-12 text-center">
-                <button class="btn btn-lg btn-success" id="ingredientSearch">Search</button>
-            </column>
-        </row>
-        <row class="row flex-row" id="recipeRow">
-          
+    <!-- experimental -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="flip3D">
+            <div class="back">
+                <ul class="list-group">
+                    <li class="list-group-item">Pick your meats</li>
+                    <li class="list-group-item list-group-item-primary"><column  id="meatColumn"></column></li></ul>
+          </div>
+                  <div class="front">Meats</div>
+                </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="flip3D">
+            <div class="back"> 
+              <ul class="list-group">
+                  <li class="list-group-item">Pick your dairy products and pasta</li>
+                  <li class="list-group-item list-group-item-success"><column  id="pastaColumn"></column></li>
+                  <li class="list-group-item list-group-item-primary"><column  id="dairyColumn"></column></li> </ul>
+          </div>
+      
+                  <div class="front"> Pasta and Dairy</div>
+                </div>
+        </div>
+      
+        <div class="col-sm-3">
+      <div class="flip3D">
+          <div class="back">
+            <ul class="list-group">
+              <li class="list-group-item">Pick your veggies</li>
+              <li class="list-group-item list-group-item-danger">s<column  id="veggieColumn"></column></li>
+              </ul></div>
 
-        </row>
+          <div class="front"> Veggies</div>
+        </div>
+        </div>
+
+        <div class="col-sm-3">
+        <div class="flip3D">
+            <div class="back">
+              <ul class="list-group">
+                <li class="list-group-item">Pick your fruits</li>
+                
+                <li class="list-group-item list-group-item-warning"><column  id="fruitColumn"></column></li></ul></div>
+  
+            <div class="front"> Fruits</div>
+          </div></div>
+
+      </div>
     </div>
+    <div class="container search">
+      <div class="row search-btn">
+        <div class="col-sm-12">
+                          <button class="btn btn-lg btn-success" id="ingredientSearch">Search</button>
+                      </column>
+                      <row class="row flex-row" id="recipeRow"></row>
+                    </div>
+                    </div>
 </body>
 </html>
